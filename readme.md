@@ -19,7 +19,7 @@ $ npm install -g oclif-plugin-titanium
 $ mobile COMMAND
 running command...
 $ mobile (-v|--version|version)
-oclif-plugin-titanium/0.0.3 darwin-x64 node-v11.7.0
+oclif-plugin-titanium/0.0.4 darwin-x64 node-v11.7.0
 $ mobile --help [COMMAND]
 USAGE
   $ mobile COMMAND
@@ -79,5 +79,5 @@ EXAMPLES
   mobile app:create my-mobile-app
 ```
 
-_See code: [src/commands/app/create.js](https://github.com/brentonhouse/oclif-plugin-titanium/blob/v0.0.3/src/commands/app/create.js)_
+_See code: [src/commands/app/create.js](https://github.com/brentonhouse/oclif-plugin-titanium/blob/v0.0.4/src/commands/app/create.js)_
 <!-- commandsstop -->

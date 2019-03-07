@@ -37,8 +37,8 @@ class CreateCommand extends BaseCommand {
 		if (!args.id) {
 			// In order for a name to be safe for both iOS and Android,
 			// it can't have anything other than alphanumeric characters.
-			const safePublisher = args.publisher.trim().toLowerCase().replace(/[^a-z0-9]+/, '');
-			const safeName = args.name.trim().toLowerCase().replace(/[^a-z0-9]+/, '');
+			const safePublisher = args.publisher.trim().toLowerCase().replace(/[^a-z0-9]+/g, '');
+			const safeName = args.name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '');
 			args.id = `${safePublisher}.${safeName}`;
 		}
 		args.id = args.id || `${_.snakeCase(args.publisher.trim()).toLowerCase()}.${_.snakeCase(args.name.trim()).toLowerCase()}`;

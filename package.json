@@ -1,7 +1,7 @@
 {
 	"name": "oclif-plugin-titanium",
 	"description": "oclif plugin for titanium native mobile",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"author": {
 		"name": "Brenton House",
 		"email": "brenton.house@gmail.com",
