@@ -145,14 +145,12 @@ class CreateCommand extends BaseCommand {
 			spinner.info('Configuring project files');
 			return ensure_package_json()
 				.then(() => spinner.start('Finding template files', 1))
-				.then(() => globby('**/*-template.*', { cwd: args.path, onlyFiles: true, deep: true  }))
+				.then(() => globby([ '**/*-template.*', '**/*.*-template' ], { cwd: args.path, onlyFiles: true, deep: true, dot: true }))
 			 	.then(files => {
 					spinner.succeed();
 					spinner.info('Templating project files', 1);
 					return Promise.mapSeries(files, file => {
-						const extname = path.extname(file);
-						const basename = path.basename(file, extname);
-						const new_filename = basename.substring(0, basename.length - 9) + extname;
+						const new_filename = file.replace('-template', '');
 						return fs
 							.copyAsync(path.join(project_directory, file), path.join(project_directory, new_filename), { overwrite: true })
 							.then(() => fs.removeSync(path.join(project_directory, file)))
