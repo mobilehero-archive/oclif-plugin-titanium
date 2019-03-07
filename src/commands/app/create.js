@@ -35,8 +35,10 @@ class CreateCommand extends BaseCommand {
 		args.publisher = args.publisher || this.compositeConfig.publisher || 'my-company';
 
 		if (!args.id) {
-			const safePublisher = args.publisher.trim().toLowerCase().replace(/[^a-z0-9_]+/, '_');
-			const safeName = args.name.trim().toLowerCase().replace(/[^a-z0-9_]+/, '_');
+			// In order for a name to be safe for both iOS and Android,
+			// it can't have anything other than alphanumeric characters.
+			const safePublisher = args.publisher.trim().toLowerCase().replace(/[^a-z0-9]+/, '');
+			const safeName = args.name.trim().toLowerCase().replace(/[^a-z0-9]+/, '');
 			args.id = `${safePublisher}.${safeName}`;
 		}
 		args.id = args.id || `${_.snakeCase(args.publisher.trim()).toLowerCase()}.${_.snakeCase(args.name.trim()).toLowerCase()}`;
@@ -220,7 +222,6 @@ class CreateCommand extends BaseCommand {
 										return multimatch(filepath, [ '*', '!/package.json' ]);
 									},
 								}).then(() => {
-									// zzz();
 									spinner.succeed();
 									return true;
 								});
