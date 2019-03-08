@@ -302,26 +302,28 @@ CreateCommand.usagePrefix = `${`mobile ${CreateCommand.topic}:${CreateCommand.id
 // dump(flags);
 
 CreateCommand.examples = `
-${`Install from npm package`.underline}
+${`Create app from template in npm package`.underline}
 
 ${CreateCommand.usagePrefix} [@scope/]<name>
 ${CreateCommand.usagePrefix} [@scope/]<name>@<tag>
 ${CreateCommand.usagePrefix} [@scope/]<name>@<version>
 ${CreateCommand.usagePrefix} [@scope/]<name>@<version range>
 
-${`Install from github repo`.underline}
+${`Create app from template in github repo`.underline}
 
 ${CreateCommand.usagePrefix} <git-host>:<git-user>/<repo-name>
 ${CreateCommand.usagePrefix} <git-host>:<git-user>/<repo-name>#<tag>
 ${CreateCommand.usagePrefix} <git-host>:<git-user>/<repo-name>#<branch>
 ${CreateCommand.usagePrefix} <git repo url>
 
-${`Install from tarball`.underline}
+${`(where <git-host> can be: github, bitbucket, or gitlab)`.italic}
+
+${`Create app from template in tarball`.underline}
 
 ${CreateCommand.usagePrefix} <tarball file>
 ${CreateCommand.usagePrefix} <tarball url>
 
-${`Install from local directory`.underline}
+${`Create app from template in local directory`.underline}
 
 ${CreateCommand.usagePrefix} <folder>
 
