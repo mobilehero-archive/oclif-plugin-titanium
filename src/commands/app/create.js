@@ -309,7 +309,7 @@ ${CreateCommand.usagePrefix} [@scope/]<name>@<tag>
 ${CreateCommand.usagePrefix} [@scope/]<name>@<version>
 ${CreateCommand.usagePrefix} [@scope/]<name>@<version range>
 
-${`Create app from template in github repo`.underline}
+${`Create app from template in git repo`.underline}
 
 ${CreateCommand.usagePrefix} <git-host>:<git-user>/<repo-name>
 ${CreateCommand.usagePrefix} <git-host>:<git-user>/<repo-name>#<tag>
