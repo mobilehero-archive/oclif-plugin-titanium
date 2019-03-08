@@ -299,42 +299,33 @@ CreateCommand.topic = 'app';
 CreateCommand.id = 'create';
 CreateCommand.usagePrefix = `${`mobile ${CreateCommand.topic}:${CreateCommand.id}`.bold.yellow} my-app-name`;
 
-
 // dump(flags);
 
 CreateCommand.examples = `
+${`Install from npm package`.underline}
 
 ${CreateCommand.usagePrefix} [@scope/]<name>
 ${CreateCommand.usagePrefix} [@scope/]<name>@<tag>
 ${CreateCommand.usagePrefix} [@scope/]<name>@<version>
 ${CreateCommand.usagePrefix} [@scope/]<name>@<version range>
+
+${`Install from github repo`.underline}
+
 ${CreateCommand.usagePrefix} <git-host>:<git-user>/<repo-name>
+${CreateCommand.usagePrefix} <git-host>:<git-user>/<repo-name>#<tag>
+${CreateCommand.usagePrefix} <git-host>:<git-user>/<repo-name>#<branch>
 ${CreateCommand.usagePrefix} <git repo url>
+
+${`Install from tarball`.underline}
+
 ${CreateCommand.usagePrefix} <tarball file>
 ${CreateCommand.usagePrefix} <tarball url>
+
+${`Install from local directory`.underline}
+
 ${CreateCommand.usagePrefix} <folder>
 
-@scope refers to npm scoped packages
 `;
-// CreateCommand.examples = [
-// 	'',
-// 	'Create app using default template (@titanium/alloy-template-default):'.underline.bold,
-// 	`${CreateCommand.usagePrefix} my-mobile-app`,
-// 	'',
-// 	'Create app from npm package:'.underline.bold,
-// 	`${CreateCommand.usagePrefix} my-mobile-app @titanium/alloy-template-basic`,
-// 	'',
-// 	'Create app from local template:'.underline.bold,
-// 	`${CreateCommand.usagePrefix} my-mobile-app ../templates/my-mobile-template`,
-// 	'',
-// 	'Create app from GitHub repo:'.underline.bold,
-// 	`${CreateCommand.usagePrefix} my-mobile-app brentonhouse/titanium-alloy-template-default`,
-// 	'',
-// 	'Create app using default template (@titanium/alloy-template-default):'.underline.bold,
-// 	`${CreateCommand.usagePrefix} my-mobile-app`,
-// 	'',
-
-// ];
 
 
 CreateCommand.args = [
