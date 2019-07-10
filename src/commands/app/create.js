@@ -58,6 +58,19 @@ class CreateCommand extends BaseCommand {
 		args.copyright = args.copyright || this.compositeConfig.copyright || `Copyright (c) ${args.currentYear} ${args.publisher}`;
 		args.url = args.url || this.compositeConfig.url || '';
 
+
+		args.author_name = args.author_name || args.publisher;
+		args.author_email = args.author_email || 'nobody@nowhere.com';
+		args.author_url = args.author_url || args.url;
+
+		args.repo_type = args.repo_type || 'git';
+		args.repo_url = args.repo_url || `github:${args.github_username}/${args.name}`;
+
+
+		args.bugs_url = args.bugs_url || `https://github.com/${args.github_username}/${args.name}/issues`;
+		args.bugs_email = args.bugs_email || args.author_email;
+
+
 		// dump(this.compositeConfig);
 		// dump(this.config);
 		// dump(args);
@@ -389,6 +402,28 @@ CreateCommand.flags = {
 		description: 'Specifies the license for the project',
 		required:    false,
 		default:     'MIT',
+	}),
+	github_username: flags.string({
+		char:        'l',
+		description: 'Specifies the github username for the project',
+		required:    false,
+		default:     'my-github-username',
+	}),
+	author_name: flags.string({
+		char:        'l',
+		description: 'Specifies the full name of the Author',
+		required:    false,
+	}),
+	author_email: flags.string({
+		char:        'l',
+		description: 'Specifies the email address of the Author',
+		required:    false,
+		default:     'nobody@nowhere.com',
+	}),
+	author_url: flags.string({
+		char:        'l',
+		description: 'Specifies the URL for the Author',
+		required:    false,
 	}),
 };
 

@@ -1,7 +1,7 @@
 {
 	"name": "oclif-plugin-titanium",
 	"description": "oclif plugin for titanium native mobile",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"author": {
 		"name": "Brenton House",
 		"email": "brenton.house@gmail.com",
@@ -11,8 +11,8 @@
 	"dependencies": {
 		"@geek/npm": "0.0.3",
 		"@geek/spinner": "^1.0.0",
-		"@oclif/command": "^1.5.8",
-		"@oclif/config": "^1.12.0",
+		"@oclif/command": "^1.5.16",
+		"@oclif/config": "^1.13.1",
 		"bluebird": "^3.5.3",
 		"chalk": "^2.4.2",
 		"colors": "^1.3.3",
@@ -27,10 +27,10 @@
 		"uuid": "^3.3.2"
 	},
 	"devDependencies": {
-		"@geek/eslint-config": "0.0.5",
-		"@oclif/dev-cli": "^1.21.0",
-		"@oclif/plugin-help": "^2.1.4",
-		"eslint": "^5.13.0"
+		"@geek/eslint-config": "0.0.7",
+		"@oclif/dev-cli": "^1.22.0",
+		"@oclif/plugin-help": "^2.2.0",
+		"eslint": "^5.16.0"
 	},
 	"engines": {
 		"node": ">=8.0.0"
